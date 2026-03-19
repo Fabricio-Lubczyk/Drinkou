@@ -1,0 +1,54 @@
+/*deixar tudo mais clean*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*configs gerais*/
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f8;
+  color: #222;
+}
+
+/*topo*/
+.topo {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #0d6efd, #6ea8fe);
+  color: white;
+}
+
+.topo h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+.topo p {
+  font-size: medium;
+}
+
+/*menu*/
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #212529;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  background-color: #343a40;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background-color: #0d6efd;
+}
