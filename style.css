@@ -1,3 +1,9 @@
+/*variaveis das cores*/
+:root {
+    --cor-header: #1a1a1a; 
+    --cor-destaque: #dd110a; 
+}
+
 /*deixar tudo mais clean*/
 * {
   margin: 0;
@@ -7,17 +13,36 @@
 
 /*configs gerais*/
 body {
-  font-family: Arial, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   background-color: #f4f6f8;
-  color: #222;
+  color: #333;
 }
 
 /*topo*/
+header {
+    text-align: center;
+}
+
+.logo {
+    width: 240px;
+    max-width: 100%; 
+    height: auto;
+    margin-bottom: 0.0002rem;
+    animation: pulsar 3s infinite alternate ease-in-out; /*animação logo pulsar*/
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.4)) /*sombras em volta da logo*/
+}
+
+@keyframes pulsar { /*animação pra fzr a logo pulsar*/
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
 .topo {
   text-align: center;
-  padding: 2rem 1rem;
-  background: linear-gradient(135deg, #0d6efd, #6ea8fe);
+  padding: 4rem 1rem 3rem 1rem;
+  background: linear-gradient(135deg, #b31010, #dd110a);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
   color: white;
 }
 
@@ -32,25 +57,37 @@ body {
 
 /*menu*/
 .menu {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  background-color: #212529;
+  gap: 1.5rem; /*espaçamento botoes*/
+  background: rgba(36, 26, 26, 0.65); /*fundo semi-transparente*/
+  backdrop-filter: blur(12px); /*desfoca oq tiver atras do menu*/
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding: 1rem;
   flex-wrap: wrap;
 }
 
 .menu a {
-  color: white;
+  color: #495057;
+  font-weight: 600;
   text-decoration: none;
-  padding: 0.6rem 1rem;
-  background-color: #343a40;
-  border-radius: 8px;
-  transition: 0.3s;
+  padding: 0.6rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
 .menu a:hover {
-  background-color: #0d6efd;
+  background-color: var(--cor-destaque);
+  color: white;
+  border-color: var(--cor-destaque);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(221, 17, 10, 0.25);
 }
 
 /*animação seguindo o mouse*/
@@ -58,12 +95,12 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(120, 50, 255, 0.4) 0%, rgba(0, 0, 0, 0) 60%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(247, 63, 63, 0.4) 0%, rgba(236, 141, 141, 0) 60%);
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: -1;
     transition: left 0.15s ease-out, top 0.15s ease-out;
-}
+}  
