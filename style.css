@@ -58,35 +58,27 @@ header {
 .menu {
   position: sticky;
   top: 0;
+  background-color: #8b0000;
   z-index: 1000;
   display: flex;
   justify-content: center;
-  gap: 1.5rem; /*espaçamento botoes*/
-  background: #8b0000; /*fundo da barra nav*/
-  backdrop-filter: blur(12px); /*desfoca oq tiver atras do menu*/
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  gap: 2rem;
   padding: 1rem;
   flex-wrap: wrap;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 .menu a {
-  color: #495057;
-  font-weight: 600;
+  color: white;
   text-decoration: none;
-  padding: 0.6rem 1.5rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 50px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s ease; /*animação mudança de cor */
 }
 
 .menu a:hover {
-  background-color: var(--cor-destaque);
-  color: white;
-  border-color: var(--cor-destaque);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(221, 17, 10, 0.25);
+  color: #ffcccc;
+  transform: translateY(-3px); /*animação subir levemente no hover */
 }
 
 /*animação seguindo o mouse*/
