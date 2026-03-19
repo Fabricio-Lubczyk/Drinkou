@@ -3,6 +3,7 @@
     --cor-header: #1a1a1a; 
     --cor-destaque: #8b0000;
     --cor-texto: #333; 
+    --cor-background: #f4f6f8;
 }
 
 /*deixar tudo mais clean*/
@@ -16,8 +17,8 @@
 body {
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  background-color: #f4f6f8;
-  color: #333;
+  background-color: var(--cor-background);
+  color: var(--cor-texto);
 }
 
 /*topo*/
@@ -58,7 +59,7 @@ header {
 .menu {
   position: sticky;
   top: 0;
-  background-color: #8b0000;
+  background-color: var(--cor-destaque);
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -79,6 +80,23 @@ header {
 .menu a:hover {
   color: #ffcccc;
   transform: translateY(-3px); /*animação subir levemente no hover */
+}
+
+/* apresentação do site */
+.apresentacao {
+  max-width: 1200px;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 0 20px;
+  font-family: "Sancreek", serif;
+  color: var(--cor-destaque);
+}
+
+.apresentacao p {
+  font-size: 1.0rem;
+  margin-bottom: 1rem;
+  color: var(--cor-texto);
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 /*animação seguindo o mouse*/
