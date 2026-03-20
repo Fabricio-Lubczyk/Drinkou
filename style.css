@@ -4,6 +4,7 @@
     --cor-destaque: #8b0000;
     --cor-texto: #333; 
     --cor-background: #f4f6f8;
+    --cor-destaque-vivo: red;
 }
 
 /*deixar tudo mais clean*/
@@ -113,3 +114,103 @@ header {
     z-index: -1;
     transition: left 0.15s ease-out, top 0.15s ease-out;
 }  
+
+/* carrosel de gole */
+.carrossel-container {
+    max-width: 1200px; /* Alinhado com o tamanho da apresentação */
+    margin: 0 auto 4rem auto;
+    overflow: hidden; /* Esconde os itens que saem da tela */
+    padding: 20px 0;
+}
+
+.carrossel-track {
+    display: flex;
+    gap: 30px; /* espaço entre grids */
+    width: max-content;
+    animation: deslizar 20s linear infinite; /* animação infinita */
+}
+
+/*carrossel para de rodar ao passar o mouse*/
+.carrossel-container:hover .carrossel-track {
+    animation-play-state: paused; 
+}
+
+/*Estilo da Grid*/
+.bebida-card {
+    width: calc((1200px / 3) - 20px); /*3 itens por vez na tela*/
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* grid pular ao por o mouse */
+.bebida-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.bebida-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.bebida-card h3 {
+    font-family: "Sancreek", serif;
+    color: var(--cor-destaque);
+    margin-bottom: 0.5rem;
+}
+
+.bebida-card p {
+    color: var(--cor-texto);
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Empurra o botão pro final do card */
+}
+
+/* botao de ver + */
+.btn-ver-mais {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--cor-header);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    opacity: 0; 
+    transform: translateY(15px); /* fica + p baixo */
+    transition: all 0.3s ease;
+}
+
+/* aparecer ver + ao por mouse na grid */
+.bebida-card:hover .btn-ver-mais {
+    opacity: 1; /*fica visivel*/
+    transform: translateY(0); /*volta p posição normal*/
+}
+
+/*botão ficar vermelho ao passar o mouse nele*/
+.btn-ver-mais:hover {
+    background-color: var(--cor-destaque-vivo); 
+    color: white; /* Garante que a letra continue branca */
+}
+
+/*Animação que faz a trilha deslizar*/
+@keyframes deslizar {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 15px)); } /* Movimenta metade da fila para o loop perfeito */
+}
+
+/* responsividade p celular não quebrar as 3 grid */
+@media (max-width: 768px) {
+    .bebida-card {
+        width: 280px;
+    }
+}
