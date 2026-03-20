@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drinkou - Sua Adega Online</title>
-     <link rel="icon" type="image/png" href="addons/icon.png">
+    <link rel="icon" type="image/png" href="addons/icon.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap" rel="stylesheet">
     <style>
+
         /* Base do Design */
         body { font-family: 'Arial', sans-serif; margin: 0; background-color: #1a1a1a; color: white; }
-        
         header { background: #ff4d00; padding: 20px; text-align: center; }
 
         
@@ -22,6 +22,22 @@
             padding: 20px;
         }
 
+        /* Onde vai ficar os card*/
+        .card {
+            background: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+
+        /*resposividade das telas piquenas */
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.5rem; }
+            .container { padding: 10px; }
+        }
   
     </style>
 </head>
