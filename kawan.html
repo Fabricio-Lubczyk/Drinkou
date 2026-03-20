@@ -37,6 +37,10 @@
             header h1 { font-size: 1.5rem; }
             .container { padding: 10px; }
         }
+        
+        /*Formato das telas piquenas*/
+        .card:hover { transform: scale(1.05); }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
 
         /*Botão de Detalhes */
         .btn-Detalhes {
@@ -49,12 +53,11 @@
         }
 
         /*resposividade das telas piquenas */
-        @media (max-width: 480px) {
+        @media (max-width: 450px) {
             header h1 { font-size: 1.5rem; }
             .container { padding: 10px; }
         }
 
-  
     </style>
 </head>
 <body>
@@ -66,22 +69,22 @@
     <img src="addons/drinkou-logo.png" alt="Logo Drinkou" class="logo">
   </header>
 
-  /*img/valor/conteúdo das telas piquenas*/
+  <!--img/valor/conteúdo das telas piquenas-->
   <div class="container">
     <div class="card">
-        <img src="https://images.tcdn.com.br/img/img_prod/1053818/vinho_tinto_montes_alpha_malbec_1718_1_a477ea77b928e4baa711d0cb1ddf2eca.jpg" alt="Vinho Tinto">
+        <img src="img_kawan/vinho_img1.png" alt="Vinho Tinto">
         <h3>Vinho Tinto Malbec</h3>
         <p>R$ 180,00</p>
         <button class="btn-Detalhes">Mais Detalhes</button>
     </div>
     <div class="card">
-        <img src="https://img.megaboxatacado.com.br/produto/1000X1000/2022524_id-VF4qT-qqCUAAAAAAAAKJ2Q.jpeg" alt="Cerveja Artesanal">
+        <img src="img_kawan/vinho_img2.png" alt="Vinho Tinto">
         <h3>Vinho Tinto Cabernet Sauvignon</h3> 
         <p>R$ 300,00</p>
         <button class="btn-Detalhes">Mais Detalhes</button>
     </div>
     <div class="card">
-        <img src="https://chezfrance.vteximg.com.br/arquivos/ids/170938-278-440/vinho-tinto-frances-languedoc-bergerie-de-mussen.jpg?v=638940875660900000" alt="Whisky">
+        <img src="img_kawan/vinho_img3.png" alt="Vinho Tinto">
         <h3>Vinho Tinto Syrah</h3>
         <p>R$ 350,00</p>
         <button class="btn-Detalhes">Mais Detalhes</button>
