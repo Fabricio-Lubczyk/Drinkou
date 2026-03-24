@@ -6,3 +6,4 @@ document.addEventListener('mousemove', (e) => {
     follower.style.left = `${clientX}px`;
     follower.style.top = `${clientY}px`;
 });
+
