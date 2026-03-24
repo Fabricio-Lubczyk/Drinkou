@@ -29,10 +29,81 @@
   <!-- apresentação do site -->
   <section class="apresentacao">
       <h2>gross</h2>
-      <p>
-        Aalcolatra dms
-      </p>
+<header class="topo">
+  <h1>História das Bebidas</h1>
+  <p>Whisky, Pinga e Cachaça</p>
+</header>
+
+<nav class="menu">
+  <a href="#whisky">Whisky</a>
+  <a href="#pinga">Pinga</a>
+  <a href="#cachaca">Cachaça</a>
+</nav>
+
+<section class="apresentacao">
+  <h2>Bem-vindo</h2>
+  <p>Conheça a origem e evolução de bebidas que marcaram culturas ao redor do mundo.</p>
+</section>
+<!-- Whisky -->
+<section class="secao-bebida" id="whisky">
+  <img src="img_gross/whisky.png" alt="Whisky">
+  <div class="texto-bebida">
+    <h2>Whisky</h2>
+    <p>
+      O whisky surgiu durante a Idade Média, principalmente na Escócia e na Irlanda. Sua criação é atribuída a monges que dominavam técnicas de destilação.
+    </p>
+    <p>
+      Inicialmente usado como medicamento, o whisky evoluiu ao longo dos séculos e passou a ser envelhecido em barris de madeira, o que lhe confere sabor e aroma característicos.
+    </p>
+    <p>
+      Hoje, é uma das bebidas mais apreciadas do mundo, com diversas variações como Scotch, Bourbon e Irish whiskey.
+    </p>
+  </div>
+</section>
+<!-- Pinga -->
+<section class="secao-bebida" id="pinga">
+  <img src="img_gross/pinga.png" alt="Pinga">
+  <div class="texto-bebida">
+    <h2>Pinga</h2>
+    <p>
+      A "pinga" é um termo popular brasileiro usado para se referir à cachaça ou outras bebidas alcoólicas fortes.
+    </p>
+    <p>
+      Sua origem está ligada ao período colonial, quando escravizados e trabalhadores dos engenhos consumiam o líquido fermentado da cana-de-açúcar.
+    </p>
+    <p>
+      O nome “pinga” pode ter surgido das gotas que escorriam dos alambiques durante o processo de destilação.
+    </p>
+  </div>
+</section>
+
+<!-- Cachaça -->
+<section class="secao-bebida" id="cachaca">
+  <img src="img_gross/cachaca.png" alt="Cachaça">
+  <div class="texto-bebida">
+    <h2>Cachaça</h2>
+    <p>
+      A cachaça é uma bebida genuinamente brasileira, produzida desde o século XVI a partir da fermentação e destilação do caldo de cana-de-açúcar.
+    </p>
+    <p>
+      Durante o período colonial, tornou-se popular entre escravizados e posteriormente entre todas as camadas da população.
+    </p>
+    <p>
+      Hoje, é reconhecida internacionalmente e é o principal ingrediente da famosa caipirinha, símbolo do Brasil.
+    </p>
+  </div>
+</section>
+
   </section>
+
+<script>
+  const follower = document.getElementById("cursor-follower");
+
+  document.addEventListener("mousemove", (e) => {
+    follower.style.left = e.clientX + "px";
+    follower.style.top = e.clientY + "px";
+  });
+</script>
 
 </body>
 </html>
