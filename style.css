@@ -37,7 +37,7 @@ header {
 
 @keyframes pulsar { /*animação pra fzr a logo pulsar*/
     0% { transform: scale(1); }
-    100% { transform: scale(1.05); }
+    100% { transform: scale(1.15); }
 }
 
 .topo {
@@ -85,88 +85,32 @@ header {
 
 /* apresentação do site */
 .apresentacao {
-  max-width: 1200px;
-  margin: 3rem auto;
+  max-width: 800px;
+  margin: 4rem auto;
   text-align: center;
   padding: 0 20px;
+}
+
+.apresentacao h2 {
   font-family: "Sancreek", serif;
   color: var(--cor-destaque);
+  font-size: clamp(3rem, 6vw, 4.5rem); 
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
 .apresentacao p {
-  font-size: 1.0rem;
+  font-size: 1.3rem; 
   margin-bottom: 1rem;
+  line-height: 1.8;
   color: var(--cor-texto);
   font-family: system-ui, -apple-system, sans-serif;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/*Estilo da Grid*/
-.bebida-card {
-    width: calc((1200px / 3) - 20px); /*3 itens por vez na tela*/
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    padding: 1.5rem;
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* grid pular ao por o mouse */
-.bebida-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-.bebida-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-
-.bebida-card h3 {
-    font-family: "Sancreek", serif;
-    color: var(--cor-destaque);
-    margin-bottom: 0.5rem;
-}
-
-.bebida-card p {
-    color: var(--cor-texto);
-    margin-bottom: 1rem;
-    flex-grow: 1; /* Empurra o botão pro final do card */
-}
-
-/* botao de ver + */
-.btn-ver-mais {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: var(--cor-header);
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    opacity: 0; 
-    transform: translateY(15px); /* fica + p baixo */
-    transition: all 0.3s ease;
-}
-
-/* aparecer ver + ao por mouse na grid */
-.bebida-card:hover .btn-ver-mais {
-    opacity: 1; /*fica visivel*/
-    transform: translateY(0); /*volta p posição normal*/
-}
-
-/*botão ficar vermelho ao passar o mouse nele*/
-.btn-ver-mais:hover {
-    background-color: var(--cor-destaque-vivo); 
-    color: white; /* Garante que a letra continue branca */
-}
-
+/* gross css */
 .secao-bebida {
       max-width: 1100px;
       margin: 3rem auto;
