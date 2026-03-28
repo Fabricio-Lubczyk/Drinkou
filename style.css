@@ -171,7 +171,7 @@ header {
 }
 
 .card-tema h3 {
-    font-family: "Sancreek", serif;
+    font-family: "Sancreek", serif; 
     color: var(--cor-destaque);
     font-size: 1.6rem;
     margin-bottom: 0.8rem;
@@ -184,21 +184,22 @@ header {
     margin-bottom: 1.5rem;
     font-size: 1.05rem;
     flex-grow: 1;
+    font-family: 'Merriweather', serif;
+    line-height: 1.6;
 }
 
-/* Botão Escondido */
 .btn-card {
     display: inline-block;
     padding: 0.8rem 1.8rem;
     background-color: var(--cor-header);
     color: white;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 50px;
-    
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.3s ease;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
 }
 
 .card-tema:hover .btn-card {
@@ -409,18 +410,13 @@ header {
         text-align: center;
       }
     }
+    
 /*Animação que faz a trilha deslizar*/
 @keyframes deslizar {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-50% - 15px)); } /* Movimenta metade da fila para o loop perfeito */
 }
 
-/* responsividade p celular não quebrar as 3 grid */
-@media (max-width: 768px) {
-    .bebida-card {
-        width: 280px;
-    }
-}
 /* responsividade p celular não quebrar as 3 grid */
 @media (max-width: 768px) {
     .bebida-card {
