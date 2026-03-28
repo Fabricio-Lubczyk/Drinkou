@@ -100,41 +100,6 @@ header {
   font-family: system-ui, -apple-system, sans-serif;
 }
 
-/*animação seguindo o mouse*/
-#cursor-follower {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(247, 63, 63, 0.4) 0%, rgba(236, 141, 141, 0) 60%);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    transition: left 0.15s ease-out, top 0.15s ease-out;
-}  
-
-/* carrosel de gole */
-.carrossel-container {
-    max-width: 1200px; /* Alinhado com o tamanho da apresentação */
-    margin: 0 auto 4rem auto;
-    overflow: hidden; /* Esconde os itens que saem da tela */
-    padding: 20px 0;
-}
-
-.carrossel-track {
-    display: flex;
-    gap: 30px; /* espaço entre grids */
-    width: max-content;
-    animation: deslizar 20s linear infinite; /* animação infinita */
-}
-
-/*carrossel para de rodar ao passar o mouse*/
-.carrossel-container:hover .carrossel-track {
-    animation-play-state: paused; 
-}
-
 /*Estilo da Grid*/
 .bebida-card {
     width: calc((1200px / 3) - 20px); /*3 itens por vez na tela*/
