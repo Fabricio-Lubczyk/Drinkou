@@ -224,6 +224,154 @@ header {
     }
 }
 
+/* Rodapé */
+.rodape {
+    background-color: var(--cor-header);
+    color: white;
+    padding: 4rem 20px 1rem 20px;
+    margin-top: 4rem; 
+}
+
+.rodape-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.rodape-info p {
+    color: #aaa;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.logo-rodape {
+    width: 180px;
+    margin-bottom: 1rem;
+    filter: grayscale(100%) brightness(200%); 
+    transition: filter 0.3s ease;
+}
+
+.logo-rodape:hover {
+    filter: grayscale(0%) brightness(100%); 
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 1rem;
+}
+
+.redes-sociais a {
+    color: white;
+    text-decoration: none;
+    background-color: #333;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.redes-sociais a:hover {
+    background-color: var(--cor-destaque);
+    transform: translateY(-3px);
+}
+
+.rodape-form-container h3 {
+    font-family: "Sancreek", serif;
+    color: var(--cor-destaque);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.rodape-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+}
+
+.rodape-form input, .rodape-form select {
+    width: 100%;
+    padding: 1rem;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: inherit;
+}
+
+.rodape-form input:focus, .rodape-form select:focus {
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 8px rgba(221, 17, 10, 0.4); 
+}
+
+.input-group label {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.rodape-form input:focus + label, .rodape-form input:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 0.85rem;
+    background-color: var(--cor-header);
+    padding: 0 0.5rem;
+    color: var(--cor-destaque);
+    font-weight: bold;
+}
+
+/* Botão Enviar */
+.btn-enviar {
+    background-color: var(--cor-destaque);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.btn-enviar:hover {
+    background-color: #ff1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(221, 17, 10, 0.4);
+}
+
+/* Direitos Autorais */
+.rodape-direitos {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 1.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 850px) {
+    .rodape-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .redes-sociais {
+        justify-content: center;
+    }
+}
+
 /* gross css */
 .secao-bebida {
       max-width: 1100px;
