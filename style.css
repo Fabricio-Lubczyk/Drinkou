@@ -583,3 +583,136 @@ como foi pensado nisso? nem te conto*/
         width: 280px;
     }
 }
+
+/*fabricio css*/
+.pagina-fabricio {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 20px;
+}
+
+.destaque-pascoa {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 3rem;
+    background-color: var(--cor-header);
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.titulo-pascoa {
+    font-family: "Sancreek", serif;
+    color: var(--cor-destaque);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 1rem;
+}
+
+.subtitulo-pascoa {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.card-bebida-pascoa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-bebida-pascoa:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.card-bebida-pascoa:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(139, 0, 0, 0.2);
+}
+
+.info-bebida {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.info-bebida h2 {
+    font-family: "Sancreek", serif;
+    color: var(--cor-destaque);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.info-bebida p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.img-bebida {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid var(--cor-background);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn-comprar {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--cor-destaque);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: 'Merriweather', serif;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.card-bebida-pascoa:hover .btn-comprar {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.btn-comprar:hover {
+    background-color: red;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    .card-bebida-pascoa, 
+    .card-bebida-pascoa:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .info-bebida {
+        align-items: center;
+    }
+
+    .img-bebida {
+        width: 100%;
+        height: auto;
+    }
+
+    .btn-comprar {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
