@@ -290,6 +290,100 @@ como foi pensado nisso? nem te conto*/
     100% { transform: translateX(calc(-50% - 15px)); } 
 }
 
+/*FAQ*/
+/* =========================================
+   SECÇÃO FAQ (Perguntas Frequentes - HTML Puro)
+   ========================================= */
+.secao-faq {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 20px;
+}
+
+.titulo-faq {
+    font-family: "Sancreek", serif;
+    color: var(--cor-destaque);
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden;
+    border-left: 4px solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Quando o details está aberto, a barra lateral fica vermelha */
+.faq-item[open] {
+    border-left-color: var(--cor-destaque);
+}
+
+.faq-item summary {
+    padding: 1.5rem;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    list-style: none; /* Remove a seta padrão do HTML */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--cor-texto);
+    transition: color 0.3s ease;
+}
+
+.faq-item summary:hover {
+    color: var(--cor-destaque);
+}
+
+/* Remove a seta padrão em navegadores WebKit (Safari/Chrome antigos) */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Adiciona um ícone + personalizado à direita */
+.faq-item summary::after {
+    content: "+";
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--cor-destaque);
+    transition: transform 0.3s ease;
+}
+
+/* Roda o ícone + para formar um x quando está aberto */
+.faq-item[open] summary::after {
+    transform: rotate(45deg); 
+}
+
+.faq-item p {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    animation: deslizarBaixoFAQ 0.4s ease-out forwards; /* Mais uma animação para os requisitos! */
+}
+
+/* Animação que faz o texto deslizar e aparecer suavemente ao abrir */
+@keyframes deslizarBaixoFAQ {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Rodapé */
 .rodape {
