@@ -225,6 +225,72 @@ header {
     }
 }
 
+/*marcas parceiras*/
+/*sem javascript, foi feito em que um momento q a ultima marca passa a lista é duplicada na caixa
+ai tem uma ilusão de ótica q faz a linha deslizar e no final da animação ela anda -50%
+como foi pensado nisso? nem te conto*/
+.secao-parceiros {
+    padding: 4rem 20px;
+    background-color: var(--cor-background);
+    text-align: center;
+    overflow: hidden; 
+    margin-bottom: 4rem;
+}
+
+.titulo-parceiros {
+    font-family: "Sancreek", serif;
+    color: var(--cor-destaque);
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 2.5rem;
+}
+
+.carrossel-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.carrossel-trilha {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: deslizar 20s linear infinite;
+}
+
+.carrossel-trilha:hover {
+    animation-play-state: paused;
+}
+
+.marca-item {
+    background-color: #2a2a2a;
+    color: var(--cor-background);
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid #444;
+    white-space: nowrap; 
+    transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.marca-item:hover {
+    transform: scale(1.1);
+    border-color: var(--cor-destaque);
+    color: var(--cor-destaque-vivo);
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
+}
+
+@keyframes deslizar {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 15px)); } 
+}
+
+
 /* Rodapé */
 .rodape {
     background-color: var(--cor-header);
