@@ -717,6 +717,133 @@ como foi pensado nisso? nem te conto*/
     }
 }
 
+/* banner leve kit*/
+.banner-kit-completo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #1a1a1a 0%, #3a0a0a 100%);
+    padding: 3rem 4rem;
+    border-radius: 20px;
+    margin-bottom: 4rem;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.info-kit {
+    flex: 1;
+    min-width: 300px;
+    color: white;
+}
+
+.info-kit h2 {
+    font-family: "Sancreek", serif;
+    color: #ffcccc;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-kit p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #ddd;
+}
+
+.preco-box {
+    margin-bottom: 2rem;
+}
+
+.preco-de {
+    display: block;
+    font-size: 1.1rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.preco-por {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #4bb71b;
+    font-family: 'Merriweather', serif;
+}
+
+.btn-comprar-combo {
+    display: inline-block;
+    background-color: var(--cor-destaque-vivo, red);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
+.btn-comprar-combo:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #cc0000;
+}
+
+/* O agrupamento das 5 garrafas */
+.garrafas-agrupadas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 300px;
+}
+
+.garrafas-agrupadas img {
+    width: 75px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: none;
+    margin: 0 -12px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease, z-index 0.4s ease;
+}
+
+.garrafas-agrupadas .garrafa-centro {
+    width: 100px;
+    height: 280px;
+    z-index: 5; 
+    border-color: var(--cor-destaque);
+}
+
+.garrafas-agrupadas img:hover {
+    transform: translateY(-20px);
+    z-index: 10; 
+}
+
+@media (max-width: 850px) {
+    .banner-kit-completo {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .garrafas-agrupadas {
+        margin-top: 2rem;
+    }
+    
+    .garrafas-agrupadas img {
+        width: 50px;
+        height: 160px;
+        margin: 0 -8px;
+    }
+    
+    .garrafas-agrupadas .garrafa-centro {
+        width: 70px;
+        height: 190px;
+    }
+}
+
+
 /*Sucesso html*/
 .fundo-sucesso {
     background-color: var(--cor-header);
